@@ -1,6 +1,7 @@
 # cintel-03-signal-design
 
-[![Python](https://img.shields.io/badge/python-3.14-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Python 3.14+](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](#)
+[![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
 > Professional Python project for continuous intelligence.
 
@@ -32,8 +33,10 @@ signals are created from raw measurements.
 
 The example pipeline reads system metrics from: `data/system_metrics_case.csv`.
 
-Each row represents a system observation with raw measurements such as requests, errors, and total latency.
-The pipeline derives signals such as error rate and average latency from these raw values.
+Each row represents a system observation with raw measurements
+such as requests, errors, and total latency.
+The pipeline derives signals such as **error rate** and
+**average latency** from these raw values.
 
 ## Working Files
 
@@ -64,7 +67,8 @@ Working through issues is part of implementing professional projects.
 
 ## Success
 
-After completing Phase 1. **Start & Run**, you'll have your own GitHub project, running on your machine, and running the example will print out:
+After completing Phase 1. **Start & Run**, you'll have your own GitHub project,
+running on your machine, and running the example will print out:
 
 ```shell
 ========================
