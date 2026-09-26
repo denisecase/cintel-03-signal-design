@@ -38,7 +38,7 @@ Signals help analysts monitor system health and detect unusual behavior.
 The proportion of failed requests relative to total requests.
 This signal helps identify **reliability problems** in a system.
 
-```
+```text
 error_rate = errors / requests
 ```
 
@@ -47,7 +47,7 @@ error_rate = errors / requests
 The **time required** for a system to respond to a request.
 In this module, we often compute **average latency per request**:
 
-```
+```text
 avg_latency = total_latency_ms / requests
 ```
 
@@ -75,3 +75,7 @@ Feature engineering often includes:
 
 The process of creating useful signals from raw system metrics.
 Well-designed signals make system behavior easier to monitor and interpret, which is essential for **continuous intelligence systems**.
+
+---
+
+[◄ Back to 🏠 Home](index.md)
