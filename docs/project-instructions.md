@@ -7,9 +7,9 @@ Follow the instructions in
 
 Complete:
 
-1. Phase 1. **Start & Run** – copy the project and confirm it runs
-2. Phase 2. **Change Authorship** – update the project to your name and GitHub account
-3. Phase 3. **Read & Understand** – review the project structure and code
+1. Phase 1. **Start & Run**
+2. Phase 2. **Read & Understand**
+3. Phase 3. **Take Ownership**
 
 ## FRIDAY/SUNDAY: Complete Workflow Phases 4-5
 
@@ -18,7 +18,7 @@ Complete:
 1. Phase 4. **Make a Technical Modification**
 2. Phase 5. **Apply the Skills to a New Problem**
 
-# Topic
+## Topic
 
 Signal design for monitoring system behavior.
 
@@ -26,7 +26,7 @@ In this project, you will transform **raw system metrics** into **derived signal
 
 Signals help analysts detect problems, understand performance, and monitor how systems behave over time.
 
-# Learning Objectives
+## Learning Objectives
 
 After completing this project, you should be able to:
 
@@ -36,11 +36,11 @@ After completing this project, you should be able to:
 - Run and validate a professional Python project
 - Interpret signals that describe system behavior
 
-# Example Code
+## Example Code
 
 The example file is located in:
 
-```
+```text
 src/cintel/signal_design_case.py
 ```
 
@@ -54,7 +54,7 @@ It demonstrates:
 
 Run the example and review the code before creating your own version.
 
-# Dataset
+## Dataset
 
 The example dataset is located in the `data/` folder.
 
@@ -68,7 +68,7 @@ Each row represents a **system observation**.
 
 Signals are created from these measurements to help monitor system behavior.
 
-# Your Phase 4: Technical Modification Task
+## Your Phase 4: Technical Modification Task
 
 Using the example as a guide:
 
@@ -94,7 +94,7 @@ Then:
 
 The goal of this phase is to verify that you can **modify a working project and observe the result**.
 
-# Phase 5: Apply the Skills
+## Phase 5: Apply the Skills
 
 In Phase 5 you will apply signal design to a new situation.
 

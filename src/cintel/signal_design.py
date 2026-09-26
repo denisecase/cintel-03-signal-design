@@ -1,8 +1,5 @@
 """
-signal_design_case.py - Project script (example).
-
-Author: Denise Case
-Date: 2026-03
+signal_design.py - Project script (example).
 
 System Metrics Data
 
@@ -34,7 +31,7 @@ Paths (relative to repo root)
 
 Terminal command to run this file from the root project folder
 
-    uv run python -m cintel.signal_design_case
+    uv run python -m cintel.signal_design
 
 OBS:
   Don't edit this file - it should remain a working example.
@@ -49,8 +46,8 @@ import logging
 from pathlib import Path
 from typing import Final
 
-import polars as pl
 from datafun_toolkit.logger import get_logger, log_header, log_path
+import polars as pl
 
 # === CONFIGURE LOGGER ONCE PER MODULE (FILE) ===
 
