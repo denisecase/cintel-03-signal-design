@@ -83,7 +83,7 @@ wheels = [
 ]
 
 [[package]]
-name = "cintel"
+name = "cintel-03-signal-design"
 version = "0.1.0"
 source = { editable = "." }
 default-groups = "all"
@@ -114,7 +114,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "pytest", specifier = ">=9" },
+    { name = "pytest" },
     { name = "pytest-cov" },
     { name = "ruff" },
     { name = "ty" },
