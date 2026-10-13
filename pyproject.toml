@@ -25,7 +25,6 @@ dependencies = [
 # WHY: Optional dependency groups keep the core install clean and focused.
 dev = [
     # REQ: External packages used for linting, testing, type checking, etc.
-    "prek",       # WHY: Run repository hooks for consistent formatting, linting, and checks.
     "pytest>=9",  # WHY: Test framework for unit and integration tests.
     "pytest-cov", # WHY: Test coverage reporting for quality assurance.
     "ruff",       # WHY: Fast linting and formatting for code quality and consistency.

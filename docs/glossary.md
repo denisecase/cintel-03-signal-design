@@ -4,12 +4,12 @@
 
 Common terms used in this module:
 
-- **Signal** - a derived metric created from raw data
+- **Signal** - a raw or derived metric used to understand system behavior
 - **Raw Metric** - a directly recorded measurement from a system
 - **Derived Metric** - a value calculated from one or more raw metrics
 - **Error Rate** - proportion of errors relative to total requests
 - **Latency** - the time required for a system to respond to a request
-- **Throughput** - the volume of work processed by a system (for example, number of requests)
+- **Throughput** - the amount of work processed by a system per unit of time
 
 ## Raw Metric
 
@@ -23,15 +23,19 @@ Raw metrics describe what happened but may not be the easiest values to interpre
 
 ## Signal
 
-A **signal** is a **derived metric** designed to make system behavior easier to understand.
-Signals are usually created by combining or transforming raw metrics.
-Examples:
+A **signal** is a raw or derived metric used to understand system behavior.
 
+Signals may be direct measurements or values calculated from other metrics.
+
+Well-designed signals help analysts monitor system health,
+recognize patterns, and detect unusual behavior.
+
+Examples include:
+
+- request volume
 - error rate
 - average latency per request
 - throughput
-
-Signals help analysts monitor system health and detect unusual behavior.
 
 ### Error Rate
 
@@ -53,12 +57,25 @@ avg_latency = total_latency_ms / requests
 
 ### Throughput
 
-The **amount of work processed** by a system in a given observation period.
+The **amount of work processed per unit of time**.
+
+Throughput can be calculated as:
+
+```text
+throughput = completed_work / elapsed_time
+```
+
+When observation intervals have equal durations,
+request counts can serve as a simple indicator of throughput.
+
+When intervals differ, counts should be normalized
+by elapsed time to support meaningful comparisons.
+
 Examples include:
 
-- requests handled
-- transactions processed
-- messages delivered
+- requests per second
+- transactions per minute
+- messages delivered per hour
 
 ## Feature Engineering
 

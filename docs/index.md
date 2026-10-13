@@ -1,21 +1,94 @@
-# 🏠 Continuous Intelligence Project Documentation
+# Signal Design for System Monitoring
 
-> Use this hosted documentation site to tell your
-> data story. Include a narrative telling your
-> results, observations, and interpretations.
-> Display visuals as needed for a compelling story.
+Continuous Intelligence | Project 03 | Example Report
 
-## Professional Workflow
+## Overview
 
-See [**Workflow B: Apply Example Project**](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
-to get a project like this running on your machine.
+This project explores how raw operational measurements
+can be transformed into useful monitoring signals.
 
-## Professional Projects
+Individual measurements provide information,
+but derived signals can make system behavior
+easier to interpret and compare.
 
-- We code like the pros to help us **focus on the analytics**.
-- Most files in this repository will never be touched.
-- If curious about a file, check out the
-  [Professional Python Project Explainer](https://denisecase.github.io/professional-python-project-explainer/).
+## Data
+
+The example contains 10 observations of system activity.
+
+Each observation includes:
+
+- `requests` - number of requests handled.
+- `errors` - number of failed requests.
+- `total_latency_ms` - cumulative response time.
+
+[View Example Dataset](https://github.com/denisecase/cintel-03-signal-design/blob/main/data/system_metrics_case.csv)
+
+## Methods
+
+The pipeline creates three monitoring signals.
+
+### Error Rate
+
+Error rate measures the proportion of failed requests.
+
+    error_rate = errors / requests
+
+### Average Latency
+
+Average latency estimates response time per request.
+
+    avg_latency_ms = total_latency_ms / requests
+
+### Throughput
+
+The example uses the number of requests per observation
+as its throughput indicator.
+
+    throughput = requests
+
+The pipeline handles zero-request observations
+without dividing by zero.
+
+## Results
+
+The example signals reveal:
+
+| Signal | Observed Range |
+|---|---|
+| Error rate | 0% to 2.5% |
+| Average latency | 25.0 to 33.71 ms |
+| Requests per observation | 60 to 200 |
+
+The output contains the original measurements
+alongside the derived monitoring signals.
+
+[View Signal Results](https://github.com/denisecase/cintel-03-signal-design/blob/main/artifacts/signals_case.csv)
+
+## Interpretation
+
+Error rate provides a useful indicator of reliability,
+while average latency describes responsiveness.
+
+Request counts provide additional context about activity.
+
+Together, these signals offer a more informative view
+of system behavior than the raw measurements alone.
+
+## Limitations
+
+The example does not establish acceptable performance
+thresholds or evaluate changes over time.
+
+Request counts are not normalized by elapsed time,
+so they represent throughput only when observation
+intervals are comparable.
+
+## Conclusion
+
+Effective monitoring begins with thoughtful signal design.
+
+Signals should reflect the operational questions
+that the monitoring system is intended to answer.
 
 ## Documentation Index
 
@@ -25,22 +98,16 @@ to get a project like this running on your machine.
 - [**API**](api.md)
 - [**Reactive App**](./app/index.html)
 
-## How To Set Up This Project Documentation
+## Project Links
 
-Go to your GitHub repository / (More) / Settings / Pages /
-Build and deployment Source = GitHub Actions.
+- [GitHub Repository](https://github.com/denisecase/cintel-03-signal-design)
+- [Example Pipeline](https://github.com/denisecase/cintel-03-signal-design/blob/main/src/cintel/signal_design.py)
+- [Results and Artifacts](https://github.com/denisecase/cintel-03-signal-design/tree/main/artifacts)
+- [Project Instructions](project-instructions.md)
 
-We have a helper at `.github/workflows/deploy-zensical.yml` that will
-automagically deploy these documents to a hosted
-project documentation web site.
+## Project Resources
 
-When viewing your GitHub repository **Code** tab,
-click the gear icon in the **About** section on the right
-to provide a short description, check the box to use your
-Pages documentation site, and configure some keywords.
-
-Professional communication is a valuable skill.
-
-## Additional Resources
-
+- [Project Instructions](project-instructions.md)
+- [Professional Python Guide](https://denisecase.github.io/pro-analytics-02/)
+- [Professional Python Project Explainer](https://pup-pack.github.io/professional-python-project-explainer/).
 - [Suggested Datasets](https://denisecase.github.io/pro-analytics-02/reference/datasets/cintel/)

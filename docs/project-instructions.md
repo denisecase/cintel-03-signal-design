@@ -1,128 +1,110 @@
 # Project Instructions
 
-## WEDNESDAY: Complete Workflow Phase 1-3
+## Goal
 
-Follow the instructions in
-[⭐ **Workflow: Apply Example**](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/).
+Apply **signal design** to transform raw system measurements
+into useful indicators of operational behavior.
 
-Complete:
+## A. Set Up Machine
 
-1. Phase 1. **Start & Run**
-2. Phase 2. **Read & Understand**
-3. Phase 3. **Take Ownership**
+Complete [Workflow A: Set Up Machine](https://denisecase.github.io/pro-analytics-02/workflow-a-set-up-machine/)
+if your machine is not ready.
 
-## FRIDAY/SUNDAY: Complete Workflow Phases 4-5
+## B. Explore Example Project
 
-Complete:
+Follow [Workflow B: Explore Example Project](https://denisecase.github.io/pro-analytics-02/workflow-b-explore-example-project/).
 
-1. Phase 4. **Make a Technical Modification**
-2. Phase 5. **Apply the Skills to a New Problem**
+Explore how the example:
 
-## Topic
+- Reads system metrics using Polars.
+- Calculates error rate from requests and errors.
+- Calculates average latency per request.
+- Handles division by zero.
+- Creates new signal columns.
+- Saves the resulting signals as a CSV artifact.
 
-Signal design for monitoring system behavior.
+Consider why the derived signals may be more informative
+than the original measurements.
 
-In this project, you will transform **raw system metrics** into **derived signals** that are easier to interpret and monitor.
+## C. Start New Project
 
-Signals help analysts detect problems, understand performance, and monitor how systems behave over time.
+Follow [Workflow C: Start New Project](https://denisecase.github.io/pro-analytics-02/workflow-c-start-new-project/).
 
-## Learning Objectives
+IMPORTANT: New repository name:
+**cintel-03-signal-design**.
 
-After completing this project, you should be able to:
+VERIFY: You have completed git add-commit-push to GitHub at least twice.
 
-- Explain why analysts design signals from raw data
-- Create derived metrics using simple calculations
-- Add new signal columns to a DataFrame
-- Run and validate a professional Python project
-- Interpret signals that describe system behavior
+## D. Apply Skills
 
-## Example Code
+Follow [Workflow D: Apply Skills](https://denisecase.github.io/pro-analytics-02/workflow-d-apply-skills/).
 
-The example file is located in:
+**Your problem:** Investigate how service reliability
+relates to request volume.
 
-```text
-src/cintel/signal_design_case.py
-```
+You may use the example dataset with a new analytical
+question or choose another appropriate dataset.
 
-It demonstrates:
+### Progression 1. Your Project Works Like the Example
 
-- reading system metrics from a CSV file
-- creating derived signals from raw measurements
-- protecting calculations from division-by-zero
-- writing signal outputs to an artifacts file
-- logging the pipeline process
+Ensure your new custom project runs like the example.
 
-Run the example and review the code before creating your own version.
+Verify that key files have been updated to use **your GitHub account** and
+the **new custom repository name**.
 
-## Dataset
+### Progression 2. Make a Technical Modification
 
-The example dataset is located in the `data/` folder.
+Add at least one new signal.
 
-Example fields include:
+For example, calculate the proportion
+of successful requests:
 
-- `requests`
-- `errors`
-- `total_latency_ms`
+    success_rate = (requests - errors) / requests
 
-Each row represents a **system observation**.
+Handle observations with zero requests appropriately.
 
-Signals are created from these measurements to help monitor system behavior.
+Verify the new signal and explain what it measures.
 
-## Your Phase 4: Technical Modification Task
+### Progression 3. Apply to a New Problem
 
-Using the example as a guide:
+Investigate whether service reliability differs
+between observations with higher and lower request volumes.
 
-1. Copy `src/cintel/signal_design_case.py`.
-2. Rename the copy to `src/cintel/signal_design_yourname.py`.
-3. Run your copied file to confirm it executes correctly.
-4. Modify the file by adding **at least one additional signal**.
+- Define how request volumes will be grouped.
+- Calculate useful reliability signals.
+- Compare the observations.
+- Save the resulting signals and comparisons.
+- Interpret what the signals reveal.
 
-Possible signals include:
+You may apply the same techniques to a different
+monitoring scenario if preferred.
 
-- error rate per request
-- average latency per request
-- requests per time unit
-- ratio-based metrics
+## E. Finalize Project
 
-Your new signal should be added as a new column in the DataFrame.
+Follow [Workflow E: Finalize Project](https://denisecase.github.io/pro-analytics-02/workflow-e-finalize/).
 
-Then:
+Use `docs/index.md` to report:
 
-- run the project
-- confirm the new signal appears in the output artifact
-- confirm the program logs useful messages
+- Data and operational question.
+- Signals designed and their calculations.
+- Technical modifications.
+- Results and a relevant visual.
+- Interpretation and limitations.
 
-The goal of this phase is to verify that you can **modify a working project and observe the result**.
+Include a clickable link to your repository and artifacts.
 
-## Phase 5: Apply the Skills
+## Success
 
-In Phase 5 you will apply signal design to a new situation.
-
-Possible approaches include:
-
-- modifying the dataset
-- introducing additional system signals
-- applying the method to a different monitoring scenario
-
-Examples might include:
-
-- website traffic monitoring
-- application performance monitoring
-- service request analysis
-- sensor or environmental measurements
-
-Document your changes in the project documentation (`docs/`):
-
-- describe the signals you added
-- explain why they are useful
-- describe what they reveal about the system
-
-Signal design is a key step in **continuous intelligence**, because monitoring systems depend on signals that clearly describe system behavior.
-
-If you would like to apply these skills to a real dataset instead of the provided example data, see suggested datasets:
-
-https://denisecase.github.io/pro-analytics-02/reference/datasets/cintel/
+- [ ] README.md project-specific links use **your GitHub account**
+- [ ] README.md project-specific links use **your custom repository name**.
+- [ ] docs/index.md project-specific links use **your GitHub account**
+- [ ] docs/index.md project-specific links use **your custom repository name**.
+- [ ] pyproject.toml `name` has been changed to use **your custom repository name**.
+- [ ] The `src/cintel` folder reflects your authorship and custom work.
+- [ ] All necessary commands are provided and work successfully.
+- [ ] Links to the Professional Python Guide (pro-analytics-02) remain unchanged.
+- [ ] Commit history shows **at least** the git add-commit-push history required in the instructions.
 
 ---
 
-[◄ Back to 🏠 Home](index.md)
+[◄ Back to Home](index.md)
