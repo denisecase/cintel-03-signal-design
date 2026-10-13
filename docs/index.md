@@ -21,7 +21,7 @@ Each observation includes:
 - `errors` - number of failed requests.
 - `total_latency_ms` - cumulative response time.
 
-[View Example Dataset](https://github.com/denisecase/cintel-03-signal-design/blob/main/data/system_metrics_case.csv)
+[View Example Dataset](https://github.com/denisecase/cintel-03-signal-design/blob/main/data/system_metrics.csv)
 
 ## Methods
 
@@ -62,7 +62,7 @@ The example signals reveal:
 The output contains the original measurements
 alongside the derived monitoring signals.
 
-[View Signal Results](https://github.com/denisecase/cintel-03-signal-design/blob/main/artifacts/signals_case.csv)
+[View Signal Results](https://github.com/denisecase/cintel-03-signal-design/blob/main/artifacts/signals.csv)
 
 ## Interpretation
 

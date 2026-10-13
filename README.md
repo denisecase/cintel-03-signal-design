@@ -67,7 +67,7 @@ uv run python -m cintel.signal_design
 ## Results
 
 The pipeline adds calculated signals to the input measurements
-and writes `artifacts/signals_case.csv`.
+and writes `artifacts/signals.csv`.
 Review the generated signals and consider what they reveal
 that the raw measurements alone do not.
 
